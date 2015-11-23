@@ -11,4 +11,4 @@ More info about SIP Normalization can be found here:
 http://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/sip_tn/9_1_1/sip_t_n.html
 
 # Disclaimer
-Use the script at your own risk, if you brake something, you are on your own.
+Use the script at your own risk, if you break something, you are on your own.
