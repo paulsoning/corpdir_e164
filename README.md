@@ -7,5 +7,5 @@ Script for litting up the Presence on a Cisco 8841 in Corporate Directory, when 
 2. Set the Script in a SIP Profile and add the Profile to the Device.
 
 # More Info
-More info to SIP Normalization can be found here:
+More info about SIP Normalization can be found here:
 http://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/sip_tn/9_1_1/sip_t_n.html
