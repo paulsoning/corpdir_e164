@@ -8,7 +8,9 @@ function M.inbound_SUBSCRIBE(msg)
         then
             local user = uriF:getUser()
             local Fhost = uriF:getHost()
-            local userformat = string.gsub(user, "%%20", "")
+            local userfix = string.gsub(user, "%%20", "")
+            local userformat = string.gsub(userfix, "%s+", "")
+            local fromtag = msg:getHeaderValueParameter("FROM", "tag")
             local uriStringTo = msg:getUri("TO")
             if uriStringTo
             then
@@ -19,6 +21,7 @@ function M.inbound_SUBSCRIBE(msg)
                     msg:setRequestUri("sip:" .. userformat .. "@" .. Thost)
                     msg:modifyHeader("TO", "<sip:" .. userformat .. "@" .. Thost .. ">")
                     msg:modifyHeader("FROM", "<sip:" .. userformat .. "@" .. Fhost .. ">")
+                    msg:addHeaderValueParameter("FROM", "tag", fromtag)
                 end
             end
         end
